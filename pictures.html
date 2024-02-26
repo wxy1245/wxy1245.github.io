@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        .content {
+            margin: 25px;
+            width: 75%;
+            margin: 25px;
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            font-size: 1.25em;
+        }
+
+        .content h2 {
+            margin-left: 10px;
+            margin-bottom: 0px;
+            padding: 2px;
+            font-size: 2em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 450;
+            margin-bottom: .25rem;
+            line-height: 0.75;
+            color: #6e6e6e;
+            text-rendering: optimizeLegibility;
+            overflow-wrap: break-word;
+        }
+
+        .content hr {
+            display: inline-block;
+            width: 85%;
+            margin-left: 5px;
+        }
+
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            /* 或者使用 space-between，根据你的需求 */
+        }
+
+        .photo-gallery img {
+            flex: 0 0 31.5%;
+            /* 使用32%而不是30%来留出一些间隙，如果你使用space-between则可能需要调整 */
+            max-width: 31.5%;
+            /* 与flex-basis保持一致 */
+            height: auto;
+            /* 如果你想让所有图片有相同的高度，这里需要改为一个固定的值，如200px */
+            margin-bottom: 1.5%;
+            /* 根据需要调整间隙大小 */
+            object-fit: cover;
+            /* 如果你设置了固定高度，这可以确保图片不会被拉伸或压缩，而是按比例覆盖容器 */
+        }
+
+        @media (max-width: 768px) {
+
+            /* 根据你的断点调整 */
+            .photo-gallery img {
+                flex: 0 0 48%;
+                /* 在小屏幕上每行显示两张图片 */
+                max-width: 48%;
+                margin-bottom: 2%;
+                /* 可能需要稍微增加间隙以适应屏幕大小 */
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            /* 更小的屏幕断点 */
+            .photo-gallery img {
+                flex: 0 0 100%;
+                /* 在更小的屏幕上每行显示一张图片 */
+                max-width: 100%;
+                margin-bottom: 4%;
+                /* 根据需要调整间隙大小 */
+            }
+        }
+
+        .content a {
+            margin-top: 7.5px;
+            margin-left: 10px;
+            font-style: italic;
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        video {
+            width: 80%;
+            height: auto;
+        }
+    </style>
+    <title>照片</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="./index.html">首页</a>
+        <a href="./courses.html">课程资料</a>
+        <a href="./hobbies.html">爱好</a>
+        <a href="./pictures.html">照片</a>
+    </div>
+
+    <div class="content">
+
+        <h2>个人照</h2>
+        <hr>
+
+        <div class="photo-gallery">
+            <img src="./assets/Images/1.jpg" alt="Photo 1">
+            <img src="./assets/Images/2.jpg" alt="Photo 2">
+            <img src="./assets/Images/3.jpg" alt="Photo 3">
+            <!-- 可以根据需要添加更多照片 -->
+        </div>
+
+
+        <h2>其它</h2>
+        <hr>
+
+        <a href="https://rec.ustc.edu.cn/share/5d2d2fb0-d4c5-11ee-97ad-4f35e2125ab4">2024新年视频 (主要是我弟弟剪辑的)</a>
+
+    </div>
+
+</body>
+
+</html>
