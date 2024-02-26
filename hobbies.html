@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.font.im/css2?family=Montserrat">
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- <link rel="stylesheet" href="./css/hobby.css"> -->
+    <style>
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin-top: 12.5px;
+            margin-bottom: 12.5px;
+            padding: 12.5px;
+            text-align: center;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 22.5px;
+        }
+
+        .sidebar ul li a:hover {
+            color: #007BFF;
+        }
+
+        .intro-box h2 {
+            margin-left: 10px;
+            padding: 2px;
+            font-size: 2.75em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 450;
+            margin-bottom: .25rem;
+            line-height: 0.75;
+            color: #6e6e6e;
+            text-rendering: optimizeLegibility;
+            overflow-wrap: break-word;
+        }
+
+        .intro-box hr {
+            display: inline-block;
+            width: 100%;
+            margin-left: 5px;
+        }
+
+        .content {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-around; */
+            align-items: flex-start;
+
+            margin-top: 40px;
+            padding: 0 5px;
+
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .sidebar {
+            width: 100px;
+            position: fixed;
+            top: 50%;
+            left: 13.5%;
+            transform: translateY(-50%);
+            background-color: seashell;
+            padding: 7.5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            width: 80.5%;
+            flex: 1;
+            padding: 20px;
+            margin-left: 15%;
+
+
+        }
+
+        .piano-works {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .piece {
+            width: 87.5%;
+            margin: 17.5px;
+            padding: 17.5px;
+            padding-bottom: 5px;
+            background-color: #f1f1f1;
+            border: 1px solid rgba(60, 60, 60, 0.2);
+            border-radius: 10px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .piece h2 {
+            margin-top: 5px;
+            color: #333;
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .piece p {
+            color: #666;
+            font-size: 20px;
+            margin-bottom: 2.5px;
+        }
+
+        #audio_bt,
+        #progressBar {
+            margin: 5px;
+            padding: 5px 5px;
+            appearance: none;
+            border: none;
+            background: none;
+            font-size: 20px;
+        }
+
+        #audio_bt {
+            border: 1.5px solid #444;
+            border-radius: 5px;
+            margin: 7.5px;
+            cursor: pointer;
+        }
+
+        #progressBar {
+            width: 150px;
+            margin: 10px;
+            flex-grow: 1;
+            height: 20px;
+            cursor: pointer;
+            border: 1.5px solid #aaa;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #progressBar::-webkit-progress-bar {
+            background-color: #f3f3f3;
+            border-radius: 10px;
+        }
+
+        #progressBar::-webkit-progress-value {
+            background-color: #4caf70;
+            border-radius: 10px;
+        }
+
+        #progressBar::-moz-progress-bar {
+            background-color: #4caf70;
+            border-radius: 10px;
+        }
+
+        #progressBar::-ms-fill {
+            background-color: #4caf70;
+            border-radius: 10px;
+        }
+
+        #progressBar::-webkit-slider-thumb {
+            appearance: none;
+        }
+
+        #progressBar::-moz-range-thumb {
+            appearance: none;
+        }
+
+        #progressBar::-ms-thumb {
+            appearance: none;
+        }
+
+        .piece .audio-set {
+            margin-left: 2.5px;
+            margin-right: 10px;
+            margin-top: 7.5px;
+            margin-bottom: 2.5px;
+            padding: 5px;
+
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .piece a {
+            margin: 5px;
+            font-style: italic;
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .piece a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <title>我的爱好</title>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="./index.html">首页</a>
+        <a href="./courses.html">课程资料</a>
+        <a href="./hobbies.html">爱好</a>
+        <a href="#picture">照片</a>
+    </div>
+
+    <div class="content">
+
+        <div class="sidebar">
+            <ul>
+                <li><a href="#piano">钢琴</a></li>
+                <li><a href="#go">围棋</a></li>
+                <li><a href="#ball">球类</a></li>
+            </ul>
+        </div>
+
+        <div class="intro-box">
+
+            <h2 id="piano">钢琴</h2>
+            <hr>
+
+            <div class="piano-works">
+                <script>
+                    // 数据准备
+                    audioData = [
+                        { name: "贝多芬月光奏鸣曲", audioSrc: "./assets/Piano_pieces/贝多芬月光奏鸣曲 最佳版.m4a", scorelink: "https://www.hqgq.com/pu/show/56986" },
+                        { name: "舒伯特奏鸣曲 (Op.120 第一乐章)", audioSrc: "./assets/Piano_pieces/舒伯特奏鸣曲 最佳版.m4a", scorelink: "https://wap.hqgq.com/pu/show/41234" },
+                        { name: "爱之梦", audioSrc: "./assets/Piano_pieces/爱之梦 最佳版.m4a", scorelink: "https://www.hqgq.com/pu/show/54779" },
+                        { name: "云雀", audioSrc: "./assets/Piano_pieces/云雀 最佳版.m4a", scorelink: "https://www.hqgq.com/pu/show/32934" },
+                        { name: "平湖秋月", audioSrc: "./assets/Piano_pieces/平湖秋月 最佳版.m4a", scorelink: "https://www.hqgq.com/pu/show/56990" }
+                    ]
+
+                    // 渲染
+                    const pianoWorks = document.querySelector('.piano-works')
+
+                    for (let i = 0; i < audioData.length; i++) {
+                        pieceAdd = document.createElement('div')
+                        pieceAdd.className = 'piece'
+
+                        pieceAdd.innerHTML = `
+                        <h2>${audioData[i].name}</h2>
+
+                        <div class="audio-set">
+                            <audio src="${audioData[i].audioSrc}" preload="auto"></audio>
+                            <span style="font-size: 20px;">我的录音:</span>
+                            <progress id="progressBar" value="0" max="100"></progress>
+                            <button id="audio_bt" type="button">播放</button>
+                        </div>
+
+                        <a href="${audioData[i].scorelink}" target=blank>曲谱链接</a>
+                        `
+                        pianoWorks.appendChild(pieceAdd)
+                    }
+                </script>
+
+                <script>
+                    // 给每个 audio_set 添加响应 (button和进度条都需要)
+                    audio_lists = document.querySelectorAll('.audio-set')
+                    for (let i = 0; i < audio_lists.length; i++) {
+                        const audio = audio_lists[i].querySelector('audio')
+                        console.log(audio)
+                        const progressBar = audio_lists[i].querySelector('progress')
+                        const playPauseButton = audio_lists[i].querySelector('button')
+
+                        let timeDisplay = document.createElement('span')
+
+                        // audio.addEventListener('loadedmetadata', displayDuration, false) // 新增事件监听器
+                        // audio.addEventListener('timeupdate', updateProgress, false)
+                        // progressBar.addEventListener('click', changeProgress, false)
+                        audio.addEventListener('loadedmetadata', function () {
+                            timeDisplay.textContent = '0:00 / ' + formatTime(audio.duration);
+                        }, false)
+
+                        audio.addEventListener('timeupdate', function () {
+                            const percentage = (audio.currentTime / audio.duration) * 100;
+                            progressBar.value = percentage;
+                            timeDisplay.textContent = formatTime(audio.currentTime) + ' / ' + formatTime(audio.duration);
+                        }, false)
+
+                        progressBar.addEventListener('click', function (e) {
+                            const clickPosition = e.pageX - progressBar.offsetLeft;
+                            const progressBarWidth = window.getComputedStyle(progressBar).getPropertyValue('width');
+                            const progressBarWidthValue = parseFloat(progressBarWidth, 10);
+                            const clickPositionInPercentage = (clickPosition / progressBarWidthValue) * 100;
+                            progressBar.value = clickPositionInPercentage;
+                            audio.currentTime = (clickPositionInPercentage / 100) * audio.duration;
+                        }, false)
+
+                        playPauseButton.addEventListener('click', function () {
+                            if (audio.paused) {
+                                audio.play();
+                                playPauseButton.textContent = '暂停';
+                            } else {
+                                audio.pause();
+                                playPauseButton.textContent = '播放';
+                            }
+                        })
+
+                        // 格式化时间
+                        function formatTime(time) {
+                            const minutes = Math.floor(time / 60);
+                            const seconds = Math.floor(time % 60);
+                            return minutes + ':' + (seconds < 10 ? '0' + seconds : seconds);
+                        }
+
+                        console.log(timeDisplay)
+
+                        audio_lists[i].insertBefore(timeDisplay, playPauseButton);
+                    }
+                </script>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
