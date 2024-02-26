@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.font.im/css2?family=Montserrat">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>课程资料</title>
+    <style>
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 75%;
+            margin-top: 50px;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .course {
+            width: 85%;
+            margin: 25px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border: 1px solid rgba(60, 60, 60, 0.2);
+            border-radius: 10px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            font-size: 22px;
+        }
+
+        .course h2 {
+            margin-top: 1.5px;
+            color: #333;
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .course p {
+            color: #666;
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .course a {
+            margin-top: 7.5px;
+            font-style: italic;
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .course a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="./index.html">首页</a>
+        <a href="./courses.html">课程资料</a>
+        <a href="#hobby">爱好</a>
+        <a href="#picture">照片</a>
+    </div>
+
+    <div class="content">
+
+        <div class="course">
+            <h2>有限元方法</h2>
+            <p>
+                课程简介: 有限元方法 (Finite Element Method, FEM) 是一种数值求解偏微分方程边值问题的方法. 
+                其基本思想是将求解区域划分为有限个单元, 在每个单元上, 可以对未知的解函数在一定函数空间中做插值逼近, 
+                最终合成为一个整体的解 <br> <br>              
+                课程主要涉及: 一维Possion方程的有限元分析流程, Sobolev空间, 椭圆型问题的适定性, 有限元空间的构造, 协调有限元方法的误差估计等               
+            </p>
+            <a href="./Lessons/FEM.html">课程资料(2023秋 徐岩)</a> 
+        </div>
+        
+        <div class="course">
+            <h2>数值分析</h2>
+            <p>
+                课程简介: 数值分析主要讨论如何求解微积分中的计算问题, 研究对所设计的数值方法进行算法精度, 稳定性, 计算复杂性等分析. 
+                它在科学计算领域有十分广泛的应用(如逼近论, 函数方程, 优化问题, 微分方程等) <br> <br>              
+                课程主要涉及: 函数逼近(插值, 拟合), 数值微分和数值积分, 常微分方程数值解          
+            </p>
+            <a href="./Lessons/NA.html">课程资料(2023春 徐岩)</a> 
+        </div>
+        
+        <div class="course">
+            <h2>线性代数B1</h2>
+            <p>
+                课程简介:  线性代数主要研究线性空间(一种具有线性结构的集合)及其上的线性变换. 
+                由于线性变换与矩阵的对应关系(在取定线性空间的一组基下), 我们常常使用矩阵与行列式作为代数工具来处理问题 <br> <br>              
+                课程主要涉及: 矩阵与行列式, 线性空间与线性变换, 特征值与特征向量, 内积, 二次型等               
+            </p>
+            <a href="./Lessons/LA.html">课程资料(2022秋 陈效群)</a> 
+        </div>
+
+        <div class="course">
+            <h2>代数学基础</h2>
+            <p>
+                课程简介:  本课首先介绍一些群环域中的基础理论, 之后研究两个熟悉的对象: 整数和多项式.
+                在过程中, 逐步体会近世代数理论如何运用在数论和多项式研究当中, 以及数论和多项式给近世代数提供丰富的实例 <br> <br>              
+                课程主要涉及: 群环域的基本知识, 数论, 多项式理论             
+            </p>
+            <a href="./Lessons/AlgBasic.html">课程资料(2023秋 马立明)</a> 
+        </div>
+
+        <div class="course">
+            <h2>几何学基础</h2>
+            <p>
+                课程简介: 本课是大学几何学入门课, 讲授欧几里得之后至二十世纪之前的几何学发展历程中出现的重要几何思想, 
+                既为学习线性代数和近世代数等课程提供素材，也为将来学习理解现代几何打下基础与激发兴趣 <br> <br>              
+                课程主要涉及:  几何公理化体系，欧式空间与向量代数, 刚体变换等几何变换, 射影几何初步, 拓扑学初步等          
+            </p>
+            <a href="./Lessons/GeoBasic.html">课程资料(2023秋 赵晨)</a> 
+        </div>
+        
+
+        
+    </div>
+</body>
+
+</html>

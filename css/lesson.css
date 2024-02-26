@@ -1,0 +1,160 @@
+h1 {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    padding: 2px;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 450;
+    margin-bottom: .5rem;
+    line-height: 1;
+    color: #6e6e6e;
+    text-rendering: optimizeLegibility;
+    overflow-wrap: break-word;
+}
+
+h2 {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    padding: 2px;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 450;
+    margin-bottom: .25rem;
+    line-height: 0.75;
+    color: #6e6e6e;
+    text-rendering: optimizeLegibility;
+    overflow-wrap: break-word;
+}
+
+a {
+    margin-top: 7.5px;
+    font-style: italic;
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    width: 85%;
+    margin: 25px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    font-size: 1em;
+}
+
+.content hr {
+    display: inline-block;
+    width: 90%;
+    margin-left: 5px;
+}
+
+.content .intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    align-items: flex-start;
+}
+
+.intro ul {
+    list-style-type: none;
+    /* 移除默认的列表样式 */
+
+    margin: 0;
+    margin-top: 2.5px;
+
+    color: #6e6e6e;
+    font-weight: 400;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.intro li {
+    margin-bottom: 2.5px;
+    padding-left: 10px;
+}
+
+.intro li:before {
+    content: "•";
+    color: #6e6e6e;
+    display: inline-block;
+    width: 0.75em;
+    margin-left: -1em;
+    font-size: 1.5em;
+}
+
+.intro hr {
+    display: inline-block;
+    width: 68.5%;
+    margin-left: 5px;
+}
+
+.intro p {
+    margin-left: 5px;
+    margin-top: 5px;
+    color: #666;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.course-list {
+    width: 95%;
+    height: 400px;
+    overflow-y: scroll;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.course-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.course-list th,
+.course-list td {
+    font-size: 18px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.notes-list {
+    width: 95%;
+    height: auto;
+    overflow-y: scroll;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.notes-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.notes-list th,
+.notes-list td {
+    font-size: 18px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+

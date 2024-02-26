@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.font.im/css2?family=Montserrat">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>王翔远的个人主页</title>
+    <style>
+        .content {
+            display: flex;
+            /* 设置content为Flex布局 */
+            justify-content: space-around;
+            /* 使info-box和intro-box在水平方向上分开 */
+            width: 75%;
+            /* 设置content的宽度为75% */
+            margin-top: 50px;
+        }
+
+        .info-box {
+            width: 425px;
+            height: fit-content;
+            margin-top: 30px;
+            margin-left: 10px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border: 1px solid rgba(60, 60, 60, 0.2);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .info-box img {
+            width: 100%;
+            margin-bottom: 18px;
+        }
+
+        .info-box p {
+            margin: 0;
+            margin-bottom: 8px;
+            /* 增加字体之间的空间 */
+            padding: 0;
+            font-size: 20px;
+            font-style: italic;
+            color: rgba(145, 115, 60, 0.95);
+        }
+
+        .intro-box {
+            width: 90%;
+            margin-left: 7.5px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .intro-box  h1{
+            margin-left: 10px;
+            margin-bottom: 0px;
+            padding: 2px;
+            font-size: 2.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 450;
+            margin-bottom: .5rem;
+            line-height: 0.75;
+            color: #6e6e6e;
+            text-rendering: optimizeLegibility;
+            overflow-wrap: break-word;
+        }
+
+        .intro-box p {
+            color: #6e6e6e;
+            margin: 0;
+            margin-left: 25px;
+            margin-bottom: 0px;
+            padding: 7.5px;
+            font-size: 22px;
+        }
+
+        .intro-box ul {
+            list-style-type: none; /* 移除默认的列表样式 */
+
+            margin: 0;
+            margin-left: 5px;
+
+            color: #6e6e6e;
+            font-weight: 400; 
+
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;  
+            line-height: 1.75; 
+        }
+
+        .intro-box li {
+            margin-bottom: 8px; 
+            padding-left: 20px; 
+        }
+
+        .intro-box li:before {
+            content: "•"; 
+            color: #6e6e6e; 
+            display: inline-block; 
+            width: 1em; 
+            margin-left: -1em; 
+        }
+
+        .intro-box hr {
+            margin-top: 3.5px;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="./index.html">首页</a>
+        <a href="./courses.html">课程资料</a>
+        <a href="#hobby">爱好</a>
+        <a href="#picture">照片</a>
+    </div>
+
+    <div class="content">
+        <div class="info-box">
+            <img src="myphoto.jpg" alt="Mine">
+            <p>姓名：王翔远</p>
+
+            <p>邮箱：wxy1245@mail.ustc.edu.cn</p>
+
+            <p style="margin-bottom: 2px;">院校：中国科学技术大学</p>
+        </div>
+
+        <div class="intro-box">
+            <h1>个人简介</h1>
+            <hr style="width: 98%;">
+            <p>科大数院计算数学专业的大四本科生</p>
+            <p>兴趣广泛, 然而在专业方面还没有什么建树QAQ</p>
+            
+            <h1 style="margin-top: 40px;">教育经历</h1>
+            <hr style="width: 98%;">
+            <ul> 
+                <li>2019.9 - 2021.7 信息科学技术学院</li>
+                <li>2021.9 - 2024.6 数学科学学院 (信息与计算科学)</li>
+            </ul>
+                       
+            <h1 style="margin-top: 40px;">研究兴趣 (当前)</h1>
+            <hr style="width: 98%;">
+            <ul> 
+                <li>图神经网络及知识图谱在生命科学领域的应用</li>
+                <li>有限元方法 (以及与偏微分方程数值解等相关的东西)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
