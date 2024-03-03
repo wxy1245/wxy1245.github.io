@@ -204,7 +204,7 @@
             text-decoration: underline;
         }
 
-        .setFontsize20 {
+        .setFontsize20, .setTimesize {
             font-size: 20px;
         }
 
@@ -225,7 +225,7 @@
             }
 
             .piece h2 {
-                font-size: 18.5px;
+                font-size: 15px;
             }
 
             .piece p {
@@ -242,7 +242,11 @@
             }
 
             .setFontsize20 {
-                font-size: 15px;
+                font-size: 12.5px;
+            }
+
+            .setTimesize {
+                font-size: 7.5px;
             }
         }
     </style>
@@ -278,8 +282,8 @@
                     // 数据准备
                     audioData = [     
                         { name: "梁祝", audioSrc: "./assets/Piano_pieces/梁祝 最终版.m4a", scorelink: "https://www.aitanqin.com/gangqin/5a101600b0c.html" },
-                        { name: "贝多芬月光奏鸣曲 (第三乐章)", audioSrc: "./assets/Piano_pieces/贝多芬月光奏鸣曲 最佳版.m4a", scorelink: "https://www.hqgq.com/pu/show/56986" },
-                        { name: "舒伯特奏鸣曲 (Op.120 第一乐章)", audioSrc: "./assets/Piano_pieces/舒伯特奏鸣曲 最佳版.m4a", scorelink: "https://wap.hqgq.com/pu/show/41234" },
+                        { name: "贝多芬月光奏鸣曲 第三乐章", audioSrc: "./assets/Piano_pieces/贝多芬月光奏鸣曲 最佳版.m4a", scorelink: "https://www.hqgq.com/pu/show/56986" },
+                        { name: "舒伯特奏鸣曲 Op.120-1", audioSrc: "./assets/Piano_pieces/舒伯特奏鸣曲 最佳版.m4a", scorelink: "https://wap.hqgq.com/pu/show/41234" },
                         { name: "爱之梦", audioSrc: "./assets/Piano_pieces/爱之梦 最佳版.m4a", scorelink: "https://www.hqgq.com/pu/show/54779" },
                         { name: "云雀", audioSrc: "./assets/Piano_pieces/云雀 最佳版.m4a", scorelink: "https://www.hqgq.com/pu/show/32934" },
                         { name: "平湖秋月", audioSrc: "./assets/Piano_pieces/平湖秋月 最佳版.m4a", scorelink: "https://www.hqgq.com/pu/show/56990" }
@@ -318,6 +322,7 @@
                         const playPauseButton = audio_lists[i].querySelector('button')
 
                         let timeDisplay = document.createElement('span')
+                        timeDisplay.classList.add('setTimesize')
 
                         // audio.addEventListener('loadedmetadata', displayDuration, false) // 新增事件监听器
                         // audio.addEventListener('timeupdate', updateProgress, false)
