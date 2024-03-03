@@ -83,8 +83,6 @@
             flex: 1;
             padding: 20px;
             margin-left: 15%;
-
-
         }
 
         .piano-works {
@@ -205,6 +203,48 @@
         .piece a:hover {
             text-decoration: underline;
         }
+
+        .setFontsize20 {
+            font-size: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .sidebar {
+                width: 75px;
+                position: fixed;
+                top: 50%;
+                left: 1.5%;
+            }
+
+            .sidebar ul li a {
+                font-size: 15px;
+            }
+
+            .intro-box h2 {
+                font-size: 1.65em;
+            }
+
+            .piece h2 {
+                font-size: 18.5px;
+            }
+
+            .piece p {
+                font-size: 13.5px;
+            }
+
+            .piece a {
+                font-size: 12px;
+            }
+
+            #audio_bt,
+            #progressBar {
+                font-size: 10px;
+            }
+
+            .setFontsize20 {
+                font-size: 15px;
+            }
+        }
     </style>
     <title>我的爱好</title>
 </head>
@@ -257,7 +297,7 @@
 
                         <div class="audio-set">
                             <audio src="${audioData[i].audioSrc}" preload="auto"></audio>
-                            <span style="font-size: 20px;">我的录音:</span>
+                            <span class="setFontsize20">我的录音:</span>
                             <progress id="progressBar" value="0" max="100"></progress>
                             <button id="audio_bt" type="button">播放</button>
                         </div>

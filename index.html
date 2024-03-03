@@ -78,7 +78,7 @@
             margin-left: 25px;
             margin-bottom: 0px;
             padding: 7.5px;
-            font-size: 22px;
+            font-size: 22.5px;
         }
 
         .intro-box ul {
@@ -92,7 +92,7 @@
             font-weight: 400;
 
             font-family: 'Montserrat', sans-serif;
-            font-size: 22px;
+            font-size: 22.5px;
             line-height: 1.75;
         }
 
@@ -163,6 +163,50 @@
             display: flex;
             justify-content: space-around;
             align-items: flex-start;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                flex-direction: column; /* 在移动端改为垂直方向排列 */
+                align-items: center; /* 居中对齐 */
+                width: 100%; /* 将宽度设置为100%，以适应手机屏幕 */
+            }
+
+            .info-box {
+                width: 42.5%; /* 在移动端宽度占比为35% */
+                margin: 10px; /* 调整外边距 */
+            }
+
+            .intro-box {
+                width: 85%; /* 在移动端宽度为90% */
+                margin: 10px; /* 调整外边距 */
+            }
+
+            .intro-box h1 {
+                font-size: 1.5em;
+            }
+    
+            .info-box p{
+                font-size: 13.5px;
+            }
+
+            .intro-box p {
+                font-size: 12px;
+            }
+
+            .intro-box ul {
+                font-size: 12px;
+            }
+
+            .page-link h3 {
+                font-size: 0.9em;
+                margin-left: 5px;
+            }
+
+            .page-link a {
+                font-size: 12px;
+                margin-left: 9px;
+            }
         }
     </style>
 </head>
